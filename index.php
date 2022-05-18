@@ -1,17 +1,17 @@
 <?php
 require_once __DIR__ . 'admin.php';
 
-$mysqli = new mysqli('localhost', 'root', 'password', 'site');
+// $mysqli = new mysqli('localhost', 'root', 'password', 'site');
 
 if (mysqli_connect_errno()) {
     printf('Соединение не установлено');
     exit();
 }
 
-// $query = "SELECT * FROM h";
-// $row = mysqli_query($mysqli, $query);
-// foreach ($row as $rows) {
-// }
+$query = "SELECT * FROM h";
+$row = mysqli_query($mysqli, $query);
+foreach ($row as $rows) {
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
