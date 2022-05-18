@@ -1,7 +1,7 @@
 <?php
-require_once __DIR__ . 'admin.php';
+require_once 'admin.php';
 
-// $mysqli = new mysqli('localhost', 'root', 'password', 'site');
+$mysqli = new mysqli('localhost', 'root', 'password', 'site');
 
 if (mysqli_connect_errno()) {
     printf('Соединение не установлено');
