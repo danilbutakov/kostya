@@ -32,7 +32,7 @@ foreach ($row as $rows) {
             <h4 class="h"><span>Заголовок</span> четвертого уровня</h4>
 
             <div class="paragraphs">
-                <p class="par"><strong>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam, expedita.</strong></p>
+                <p id="par" class="par"><strong><?= $rows['par']; ?></strong></p>
                 <p class="par"><i>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam, expedita.</i></p>
                 <p class="par text-flicker"><u>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti, exercitationem.</u></p>
                 <p class="par"><s>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, vel!</s></p>

@@ -20,28 +20,28 @@ if (mysqli_connect_errno()) {
 
 <body>
     <div>
-        <h1>Редактирование h1</h1>
-        <h3><a href="adminP.php">Редактирование par</a></h3>
+        <h1><a href="">Редактирование par</a></h1>
+        <h3><a href="admin.php">Редактирование h1</a></h3>
         <h3><a href="adminI.php">Редактирование img</a></h3>
         <?php
-        $query = "SELECT * FROM h";
+        $query = "SELECT * FROM p";
         $row = mysqli_query($mysqli, $query);
         foreach ($row as $rows) {
         }
         ?>
         <form action="" method="post" class="admin">
-            <input type="text" name="h1" placeholder="<?= $rows['h1']; ?>">
+            <input type="text" name="par" placeholder="<?= $rows['par']; ?>">
             <input type="submit" value="Сохранить">
         </form>
         <?php
 
-        if ($_POST['h1'] != '') {
-            $h1 = $_POST['h1'];
+        if ($_POST['par'] != '') {
+            $par = $_POST['par'];
         } else {
-            $h1 = $rows['h1'];
+            $par = $rows['par'];
         }
         if (isset($h1)) {
-            $row = "UPDATE h SET h1='$h1' WHERE id=1";
+            $row = "UPDATE p SET par='$par' WHERE id=1";
             $mysqli->query($row);
         }
         ?>
