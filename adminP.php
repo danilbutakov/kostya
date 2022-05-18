@@ -42,7 +42,7 @@ if (mysqli_connect_errno()) {
         }
         if (isset($par)) {
             $row1 = "UPDATE p SET par='$par' WHERE id=1";
-            $mysqli->query($row)1;
+            $mysqli->query($row1);
         }
         ?>
 
