@@ -43,6 +43,8 @@ if (mysqli_connect_errno()) {
             $mysqli->query($row);
         }
         ?>
+
+        <h2><a href="index.php">Выход</a></h2>
     </div>
 </body>
 
