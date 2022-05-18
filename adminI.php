@@ -23,6 +23,7 @@ include __DIR__ . '/db.php';
             <input type="file" name="file"><br>
             <input type="submit" value="Сохранить" name="upload">
         </form>
+        <h2><a href="index.php">Выход</a></h2>
         <?php
         if (isset($_POST['upload'])) {
             if (!empty($_FILES['file']['tmp_name'])) {
@@ -31,7 +32,6 @@ include __DIR__ . '/db.php';
             $con->query("INSERT INTO i (image) VALUES ('$image')");
         }
         ?>
-        <h2><a href="index.php">Выход</a></h2>
     </div>
 </body>
 
