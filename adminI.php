@@ -29,7 +29,7 @@ include __DIR__ . '/db.php';
             if (!empty($_FILES['file']['tmp_name'])) {
                 $file = addslashes(file_get_contents($_FILES['file']['tmp_name']));
             }
-            $con->query("INSERT INTO i (image) VALUES ('$image')");
+            $connection->query("INSERT INTO i (image) VALUES ('$file')");
         }
         ?>
         <?php
