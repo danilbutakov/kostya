@@ -39,7 +39,7 @@ if (mysqli_connect_errno()) {
                 echo "Файл не смог загрузиться";
             }
 
-            $data = "INSERT INTO i VALUES (image)";
+            $data = "INSERT INTO i VALUES (`image`)";
             $mysqli->query($data);
         }
         ?>
