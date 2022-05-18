@@ -33,7 +33,7 @@ include __DIR__ . '/db.php';
         }
         ?>
         <?php
-        $query = $con->query("SELECT * FROM i ORDER BY id DESC");
+        $query = $connection->query("SELECT * FROM i ORDER BY id DESC");
         while ($row3 = $query->fetch_assoc()) {
             // $showImg = base64_encode($row3['image']);
             echo $row3['id'];
