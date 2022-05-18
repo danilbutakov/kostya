@@ -2,7 +2,8 @@
 include __DIR__ . '/db.php';
 
 $i = mysqli_query($mysqli, "SELECT * FROM `i`");
-print_r($i);
+$result = mysqli_fetch_assoc($i);
+print_r($result);
 ?>
 <!DOCTYPE html>
 <html lang="en">
