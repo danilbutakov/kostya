@@ -24,7 +24,6 @@ include __DIR__ . '/db.php';
             <input type="submit" value="Сохранить">
         </form>
         <?php
-
         if (empty($_FILES['file'])) {
 
             $file = $_FILES['file'];
@@ -35,8 +34,8 @@ include __DIR__ . '/db.php';
                 echo "Файл не смог загрузиться";
             }
 
-            $data = $query->prepare("INSERT INTO `i` (`path`) VALUES ($name)");
-            $data->execute([$name]);
+            $data = $query->prepare("INSERT INTO `i` (`id`, `image`) VALUES ('0', '$file');");
+            $data->execute([$file]);
         }
         ?>
         <h2><a href="index.php">Выход</a></h2>
