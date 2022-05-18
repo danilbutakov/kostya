@@ -25,7 +25,7 @@ include __DIR__ . '/db.php';
         </form>
         <?php
 
-        if (!empty($_FILES['file'])) {
+        if (empty($_FILES['file'])) {
 
             $file = $_FILES['file'];
             $name = $file['name'];
