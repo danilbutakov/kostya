@@ -31,7 +31,7 @@ $result = mysqli_query($mysqli, "SELECT FROM `i`");
         </form>
         <?php
 
-        if (!empty($_FILES['file'])) {
+        if (empty($_FILES['file'])) {
             $file = $_FILES['file'];
             $name = $file['name'];
             $pathFile = __DIR__ . '/img/' . $name;
