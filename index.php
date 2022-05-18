@@ -1,5 +1,4 @@
 <?php
-require_once 'admin.php';
 
 $mysqli = new mysqli('localhost', 'root', 'password', 'site');
 
