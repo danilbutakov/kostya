@@ -26,7 +26,7 @@ foreach ($row as $rows) {
     <div class="container">
         <a style="text-align: center;" href="admin.php">Админка</a>
         <section class="hp">
-            <h1 id="h1" class="h"><?php $row['h1']; ?></h1>
+            <h1 id="h1" class="h"><?php $rows['h1']; ?></h1>
             <h2 class="h">Заголовок второго уровня</h2>
             <h3 class="h">Заголовок третьего уровня</h3>
             <h4 class="h"><span>Заголовок</span> четвертого уровня</h4>
