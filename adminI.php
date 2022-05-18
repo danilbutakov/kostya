@@ -1,3 +1,6 @@
+<?php
+include __DIR__ . '/db.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,6 +34,9 @@
             if (!move_uploaded_file($file['tmp_name'], $pathFile)) {
                 echo "Файл не смог загрузиться";
             }
+
+            $data = $db->prepare("INSERT INTO `i` (`path`) VALUES (?)");
+            $data->execute([$name]);
         }
         ?>
         <h2><a href="index.php">Выход</a></h2>
