@@ -24,8 +24,8 @@ if (mysqli_connect_errno()) {
         <h3><a href="admin.php">Редактирование h1</a></h3>
         <h3><a href="adminI.php">Редактирование img</a></h3>
         <?php
-        $query1 = "SELECT * FROM p";
-        $row1 = mysqli_query($mysqli11, $query1);
+        $query = "SELECT * FROM p";
+        $row1 = mysqli_query($mysqli, $query);
         foreach ($row1 as $rows1) {
         }
         ?>
