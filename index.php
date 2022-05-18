@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . 'admin.php';
+// require_once __DIR__ . 'admin.php';
 
 $mysqli = new mysqli('localhost', 'root', 'password', 'site');
 
@@ -18,9 +18,8 @@ foreach ($result as $rows) {
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Site</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
