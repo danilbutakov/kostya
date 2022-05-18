@@ -31,7 +31,7 @@ $result = mysqli_query($mysqli, "SELECT FROM `i`");
         </form>
         <?php
 
-        if (empty($_FILES['file'])) {
+        if (!empty($_FILES['file'])) {
 
             if (!move_uploaded_file($file['tmp_name'], $pathFile)) {
                 echo "Файл не смог загрузиться";
