@@ -5,7 +5,7 @@ if (mysqli_connect_errno()) {
     printf('Соединение не установлено');
     exit();
 }
-$result = mysqli_query($mysqli, "SELECT FROM `i` ");
+$result = mysqli_query($mysqli, "SELECT FROM `i`");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -26,22 +26,13 @@ $result = mysqli_query($mysqli, "SELECT FROM `i` ");
         <h3><a href="admin.php">Редактирование h1</a></h3>
 
         <form action="" method="post" class="admin" enctype="multipart/form-data">
-            <input type="file" name="img"><br>
+            <input type="file" name="file"><br>
             <input type="submit" value="Сохранить">
         </form>
         <?php
 
-        if (!empty($_FILES['img'])) {
-            $file = $_FILES['img'];
-            $name = $file['name'];
-            $pathFile = __DIR__ . '/img/' . $name;
-
-            if (!move_uploaded_file($file['tmp_name'], $pathFile)); {
-                echo "Файл не смог загрузиться";
-            }
-
-            $data = "INSERT INTO `i`(`id`, `image`) VALUES ($file)";
-            $mysqli->query($data);
+        if (!empty($_FILES['file'])) {
+            var_dump($_FILES);
         }
         ?>
         <h2><a href="index.php">Выход</a></h2>
