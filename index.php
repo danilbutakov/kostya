@@ -1,5 +1,19 @@
+<?php
+$mysqli = new mysqli('localhost', 'root', 'password', 'site');
+
+if (mysqli_connect_errno()) {
+    printf('Соединение не установлено');
+    exit();
+}
+
+$result = $conn->query("SELECT * FROM h");
+$res = mysqli_fetch_assoc($row);
+foreach ($result as $rows) {
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +21,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <div class="container">
         <a style="text-align: center;" href="admin.php">Админка</a>
@@ -15,13 +30,15 @@
             <h2 class="h">Заголовок второго уровня</h2>
             <h3 class="h">Заголовок третьего уровня</h3>
             <h4 class="h"><span>Заголовок</span> четвертого уровня</h4>
-    
+
             <div class="paragraphs">
                 <p class="par"><strong>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam, expedita.</strong></p>
-                <p class="par"><i>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam, expedita.</i></p> 
+                <p class="par"><i>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam, expedita.</i></p>
                 <p class="par text-flicker"><u>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti, exercitationem.</u></p>
                 <p class="par"><s>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, vel!</s></p>
-                <p class="par"><abb>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, iste?</abb></p>
+                <p class="par">
+                    <abb>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, iste?</abb>
+                </p>
             </div>
         </section>
         <div class="math">
@@ -59,150 +76,150 @@
                     <tr>
                         <th colspan="10">Числитель</th>
                     </tr>
-                <tr>
-                    <th>Время</th>
-                    <th>Понедельник</th>
-                    <th>Вторник</th>
-                    <th>Среда</th>
-                    <th>Четверг</th>
-                    <th>Пятница</th>
-                </tr>
-                <tr>
-                    <td rowspan="1">8:30-10:00</td>
-                    <td></td>
-                    <td>Ин.яз(праткика)</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td rowspan="1">10:10-11:40</td>
-                    <td></td>
-                    <td>Выч.мат(лаба)</td>
-                    <td></td>
-                    <td>Выч.мат(лекция)</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td rowspan="1">12:10-13:40</td>
-                    <td></td>
-                    <td>Прог.(лаба)</td>
-                    <td>Физ-ра</td>
-                    <td>Мат.анализ(лекция)</td>
-                    <td>Прог(лекция)</td>
-                </tr>
-                <tr>
-                    <td rowspan="1">13:50-15:20</td>
-                    <td>ООП(лаба)</td>
-                    <td></td>
-                    <td>Прог.(лаба)</td>
-                    <td>Мат.анализ(праткика)</td>
-                    <td>ООП(лекция)</td>
-                </tr>
-                <tr>
-                    <td rowspan="1">15:30-17:00</td>
-                    <td>Типы данных(лаба)</td>
-                    <td></td>
-                    <td></td>
-                    <td>История(праткика)</td>
-                    <td>Выч.Мат(праткика)</td>
-                </tr>
-                <tr>
-                    <td rowspan="1">17:10-18:40</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td rowspan="1">18:45-20:15</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
+                    <tr>
+                        <th>Время</th>
+                        <th>Понедельник</th>
+                        <th>Вторник</th>
+                        <th>Среда</th>
+                        <th>Четверг</th>
+                        <th>Пятница</th>
+                    </tr>
+                    <tr>
+                        <td rowspan="1">8:30-10:00</td>
+                        <td></td>
+                        <td>Ин.яз(праткика)</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td rowspan="1">10:10-11:40</td>
+                        <td></td>
+                        <td>Выч.мат(лаба)</td>
+                        <td></td>
+                        <td>Выч.мат(лекция)</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td rowspan="1">12:10-13:40</td>
+                        <td></td>
+                        <td>Прог.(лаба)</td>
+                        <td>Физ-ра</td>
+                        <td>Мат.анализ(лекция)</td>
+                        <td>Прог(лекция)</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="1">13:50-15:20</td>
+                        <td>ООП(лаба)</td>
+                        <td></td>
+                        <td>Прог.(лаба)</td>
+                        <td>Мат.анализ(праткика)</td>
+                        <td>ООП(лекция)</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="1">15:30-17:00</td>
+                        <td>Типы данных(лаба)</td>
+                        <td></td>
+                        <td></td>
+                        <td>История(праткика)</td>
+                        <td>Выч.Мат(праткика)</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="1">17:10-18:40</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td rowspan="1">18:45-20:15</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
                 </tbody>
             </table>
-        
+
             <table class="resp-tab" border="1" align="center">
                 <tbody>
                     <tr>
                         <th colspan="10">Знаменатель</th>
                     </tr>
-                <tr>
-                    <th>Время</th>
-                    <th>Понедельник</th>
-                    <th>Вторник</th>
-                    <th>Среда</th>
-                    <th>Четверг</th>
-                    <th>Пятница</th>
-                    <th>Суббота</th>
-                </tr>
-                <tr>
-                    <td rowspan="1">8:30-10:00</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td rowspan="1">10:10-11:40</td>
-                    <td>Физ-ра</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>Ин.яз(праткика)</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td rowspan="1">12:10-13:40</td>
-                    <td>Прог(лекция)</td>
-                    <td>Прог(лаба)</td>
-                    <td></td>
-                    <td>История(лекция)</td>
-                    <td>Ин.яз(праткика)</td>
-                    <td>Мат.анализ(лекция)</td>
-                </tr>
-                <tr>
-                    <td rowspan="1">13:50-15:20</td>
-                    <td>Типы данных(лекция)</td>
-                    <td>Прог(лаба)</td>
-                    <td>ООП(лекция)</td>
-                    <td>История(праткика)</td>
-                    <td></td>
-                    <td>Мат.анализ(праткика)</td>
-                </tr>
-                <tr>
-                    <td rowspan="1">15:30-17:00</td>
-                    <td></td>
-                    <td></td>
-                    <td>ООП(лаба)</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td rowspan="1">17:10-18:40</td>
-                    <td></td>
-                    <td></td>
-                    <td>Типы данных(лаба)</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td rowspan="1">18:45-20:15</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
+                    <tr>
+                        <th>Время</th>
+                        <th>Понедельник</th>
+                        <th>Вторник</th>
+                        <th>Среда</th>
+                        <th>Четверг</th>
+                        <th>Пятница</th>
+                        <th>Суббота</th>
+                    </tr>
+                    <tr>
+                        <td rowspan="1">8:30-10:00</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td rowspan="1">10:10-11:40</td>
+                        <td>Физ-ра</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>Ин.яз(праткика)</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td rowspan="1">12:10-13:40</td>
+                        <td>Прог(лекция)</td>
+                        <td>Прог(лаба)</td>
+                        <td></td>
+                        <td>История(лекция)</td>
+                        <td>Ин.яз(праткика)</td>
+                        <td>Мат.анализ(лекция)</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="1">13:50-15:20</td>
+                        <td>Типы данных(лекция)</td>
+                        <td>Прог(лаба)</td>
+                        <td>ООП(лекция)</td>
+                        <td>История(праткика)</td>
+                        <td></td>
+                        <td>Мат.анализ(праткика)</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="1">15:30-17:00</td>
+                        <td></td>
+                        <td></td>
+                        <td>ООП(лаба)</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td rowspan="1">17:10-18:40</td>
+                        <td></td>
+                        <td></td>
+                        <td>Типы данных(лаба)</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td rowspan="1">18:45-20:15</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
                 </tbody>
             </table>
         </div>
@@ -215,4 +232,5 @@
         </div>
     </div>
 </body>
+
 </html>
