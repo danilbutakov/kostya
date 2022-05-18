@@ -31,9 +31,12 @@ if (mysqli_connect_errno()) {
         ?>
         <form action="" method="post" class="admin" enctype="multipart/form-data">
             <input type="file" name="img"><?= $rows2['img']; ?>
+            <img src="data:image/png;base64,'.base64_encode($row['image']).'">
             <input type="submit" value="Сохранить">
         </form>
         <?php
+
+        $image = addslashes(file_get_contents($_FILES['image']['tmp_name']));
 
         if ($_POST['img'] != '') {
             $img = $_POST['img'];
@@ -41,7 +44,7 @@ if (mysqli_connect_errno()) {
             $img = $rows2['img'];
         }
         if (isset($img)) {
-            $row2 = "UPDATE i SET img='$img' WHERE id=1";
+            $row2 = "INSERT INTO `i` (`id`, `image`) VALUES ('1', '{$image}')";
             $mysqli->query($row2);
         }
         ?>
