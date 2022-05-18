@@ -23,12 +23,7 @@ if (mysqli_connect_errno()) {
         <h1><a href="adminI.php">Редактирование img</a></h1>
         <h3><a href="adminP.php">Редактирование par</a></h3>
         <h3><a href="admin.php">Редактирование h1</a></h3>
-        <?php
-        $query = "SELECT * FROM i";
-        $row2 = mysqli_query($mysqli, $query);
-        foreach ($row2 as $rows2) {
-        }
-        ?>
+
         <form action="" method="post" class="admin" enctype="multipart/form-data">
             <input type="file" name="img"><br>
             <input type="submit" value="Сохранить">
