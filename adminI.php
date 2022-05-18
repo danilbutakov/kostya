@@ -36,6 +36,16 @@ if (mysqli_connect_errno()) {
         </form>
         <?php
 
+        if (!empty($_FILES['img'])) {
+            $file = $_FILES['img'];
+            $name = $file['name'];
+            $pathFile = __DIR__ . 'img/' . $name;
+        }
+
+        if (!move_uploaded_file($file['tmp_name'], $pathFile)); {
+            echo "Файл не смог загрузиться";
+        }
+
         if ($_POST['img'] != '') {
             $img = $_POST['img'];
         } else {
