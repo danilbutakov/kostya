@@ -32,6 +32,13 @@ include __DIR__ . '/db.php';
             $con->query("INSERT INTO i (image) VALUES ('$image')");
         }
         ?>
+        <?php
+        $query = $con->query("SELECT * FROM i ORDER BY id DESC");
+        while ($row3 = $query->fetch_assoc()) {
+            // $showImg = base64_encode($row3['image']);
+            $row3['id'];
+        }
+        ?>
     </div>
 </body>
 

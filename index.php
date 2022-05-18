@@ -65,7 +65,7 @@ foreach ($row1 as $rows1) {
         </div>
         <div class="img">
             <img class="img1" src="img/Google-Logo-PNG-Photo-Image.png" alt="">
-            <div class="img2"><?= $file['image']; ?></div>
+            <div class="img2"></div>
             <img class="img3" src="img/vk.png" alt="">
         </div>
         <form action="" class="form">
