@@ -32,7 +32,13 @@ $result = mysqli_query($mysqli, "SELECT FROM `i`");
         <?php
 
         if (!empty($_FILES['file'])) {
-            var_dump($_FILES);
+            $file = $_FILES['file'];
+            $name = $file['name'];
+            $pathFile = __DIR__ . '/img/' . $name;
+
+            if (!move_uploaded_file($file['tmp_name'], $pathFile)) {
+                echo "Файл не смог загрузиться";
+            }
         }
         ?>
         <h2><a href="index.php">Выход</a></h2>
