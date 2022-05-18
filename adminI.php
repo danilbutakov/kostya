@@ -1,5 +1,8 @@
 <?php
 include __DIR__ . '/db.php';
+
+$i = mysqli_query($mysqli, "SELECT * FROM `i`");
+print_r($i);
 ?>
 <!DOCTYPE html>
 <html lang="en">
