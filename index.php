@@ -11,6 +11,10 @@ $query = "SELECT * FROM h";
 $row = mysqli_query($mysqli, $query);
 foreach ($row as $rows) {
 }
+$query1 = "SELECT * FROM p";
+$row1 = mysqli_query($mysqli, $query1);
+foreach ($row1 as $rows1) {
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -32,7 +36,7 @@ foreach ($row as $rows) {
             <h4 class="h"><span>Заголовок</span> четвертого уровня</h4>
 
             <div class="paragraphs">
-                <p id="par" class="par"><strong><?= $rows['par']; ?></strong></p>
+                <p id="par" class="par"><strong><?= $rows1['par']; ?></strong></p>
                 <p class="par"><i>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam, expedita.</i></p>
                 <p class="par text-flicker"><u>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti, exercitationem.</u></p>
                 <p class="par"><s>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, vel!</s></p>
