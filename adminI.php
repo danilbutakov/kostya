@@ -1,9 +1,5 @@
 <?php
 include __DIR__ . '/db.php';
-
-$i = mysqli_query($mysqli, "SELECT * FROM `i`");
-$result = mysqli_fetch_assoc($i);
-print_r($result);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,21 +21,14 @@ print_r($result);
 
         <form action="" method="post" class="admin" enctype="multipart/form-data">
             <input type="file" name="file"><br>
-            <input type="submit" value="Сохранить">
+            <input type="submit" value="Сохранить" name="upload">
         </form>
         <?php
-        if (empty($_FILES['file'])) {
-
-            $file = $_FILES['file'];
-            $name = $file['name'];
-            $pathFile = __DIR__ . '/img/' . $name;
-
-            if (!move_uploaded_file($file['tmp_name'], $pathFile)) {
-                echo "Файл не смог загрузиться";
+        if (isset($_POST['upload'])) {
+            if (!empty($_FILES['file']['tmp_name'])) {
+                $file = addslashes(file_get_contents($_FILES['file']['tmp_name']));
             }
-
-            $data = $query->prepare("INSERT INTO `i` (`id`, `image`) VALUES ('0', '$file');");
-            $data->execute([$file]);
+            $con->query("INSERT INTO i (image) VALUES ('$image')");
         }
         ?>
         <h2><a href="index.php">Выход</a></h2>
