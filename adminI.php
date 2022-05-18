@@ -20,22 +20,22 @@ include __DIR__ . '/db.php';
         <h3><a href="admin.php">Редактирование h1</a></h3>
 
         <form action="" method="post" class="admin" enctype="multipart/form-data">
-            <input type="file" name="file"><br>
+            <input type="file" name="img_upload"><br>
             <input type="submit" value="Сохранить" name="upload">
         </form>
         <h2><a href="index.php">Выход</a></h2>
         <?php
         if (isset($_POST['upload'])) {
-            if (!empty($_FILES['file']['tmp_name'])) {
-                $file = addslashes(file_get_contents($_FILES['file']['tmp_name']));
+            if (!empty($_FILES['img_upload']['tmp_name'])) {
+                $img = addslashes(file_get_contents($_FILES['img_upload']['tmp_name']));
             }
-            $connection->query("INSERT INTO i (image) VALUES ('$img')");
+            $connection->query("INSERT INTO images (img) VALUES ('$img')");
         }
         ?>
         <?php
-        $query = $connection->query("SELECT * FROM i ORDER BY id DESC");
+        $query = $connection->query("SELECT * FROM images ORDER BY id DESC");
         while ($row3 = $query->fetch_assoc()) {
-            $showImg = base64_encode($row3['image']); ?>
+            $showImg = base64_encode($row3['img']); ?>
             <img src="data:image/jpeg;base64, <?php echo $showImg ?>" alt="">
         <?php } ?>
     </div>
