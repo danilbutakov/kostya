@@ -8,10 +8,10 @@ if (mysqli_connect_errno()) {
     exit();
 }
 
-$query = "SELECT * FROM h";
-$row = mysqli_query($mysqli, $query);
-foreach ($row as $rows) {
-}
+// $query = "SELECT * FROM h";
+// $row = mysqli_query($mysqli, $query);
+// foreach ($row as $rows) {
+// }
 ?>
 <!DOCTYPE html>
 <html lang="en">
