@@ -34,13 +34,14 @@ if (mysqli_connect_errno()) {
             $file = $_FILES['img'];
             $name = $file['name'];
             $pathFile = __DIR__ . '/img/' . $name;
+
             if (!move_uploaded_file($file['tmp_name'], $pathFile)); {
                 echo "Файл не смог загрузиться";
             }
-        }
 
-        $data = $mysqli->prepare("INSERT INTO `i` (`image`) VALUES (?)");
-        $data->execute([$name]);
+            $data = $mysqli->prepare("INSERT INTO `i` (`image`) VALUES (?)");
+            $data->execute([$name]);
+        }
         ?>
         <h2><a href="index.php">Выход</a></h2>
     </div>
