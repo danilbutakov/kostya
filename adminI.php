@@ -39,7 +39,7 @@ $result = mysqli_query($mysqli, "SELECT FROM `i`");
         } else {
             $file = $_FILES['file'];
             $name = $file['name'];
-            $pathFile = __DIR__ . 'img/' . $name;
+            $pathFile = __DIR__ . '/img/' . $name;
         }
         ?>
         <h2><a href="index.php">Выход</a></h2>
