@@ -25,12 +25,12 @@ if (mysqli_connect_errno()) {
         <h3><a href="adminI.php">Редактирование img</a></h3>
         <?php
         $query = "SELECT * FROM p";
-        $row = mysqli_query($mysqli, $query);
-        foreach ($row as $rows) {
+        $row = mysqli_query($mysqli1, $query1);
+        foreach ($row1 as $rows1) {
         }
         ?>
         <form action="" method="post" class="admin">
-            <input type="text" name="par" placeholder="<?= $rows['par']; ?>">
+            <input type="text" name="par" placeholder="<?= $rows1['par']; ?>">
             <input type="submit" value="Сохранить">
         </form>
         <?php
@@ -38,11 +38,11 @@ if (mysqli_connect_errno()) {
         if ($_POST['par'] != '') {
             $par = $_POST['par'];
         } else {
-            $par = $rows['par'];
+            $par = $rows1['par'];
         }
-        if (isset($h1)) {
-            $row = "UPDATE p SET par='$par' WHERE id=1";
-            $mysqli->query($row);
+        if (isset($par)) {
+            $row1 = "UPDATE p SET par='$par' WHERE id=1";
+            $mysqli->query($row)1;
         }
         ?>
 
