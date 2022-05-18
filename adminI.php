@@ -30,7 +30,8 @@ if (mysqli_connect_errno()) {
         }
         ?>
         <form action="" method="post" class="admin" enctype="multipart/form-data">
-            <input type="file" name="img"><?= $rows2['img']; ?>
+            <input type="file" name="img"><?= $rows2['img']; ?><br>
+            <?php echo $_FILES['img']['size']; ?>
             <input type="submit" value="Сохранить">
         </form>
         <?php
