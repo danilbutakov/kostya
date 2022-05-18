@@ -29,10 +29,15 @@ include __DIR__ . '/db.php';
             if (!empty($_FILES['file']['tmp_name'])) {
                 $file = addslashes(file_get_contents($_FILES['file']['tmp_name']));
             }
-            $con->query("INSERT INTO i (image) VALUES ('$image')");
+            $con->query("INSERT INTO i (image) VALUES ('$file')");
         }
         ?>
-
+        <?php
+        $query = $connection->query("SELECT * FROM i ORDER BY id DESC");
+        while ($row3 = $query->fetch_assoc()) {
+            $showImg = base64_encode($row3['image']); ?>
+            <img src="data:image/jpeg;base64, <?php echo $showImg ?>" alt="">
+        <?php } ?>
     </div>
 </body>
 
