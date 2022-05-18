@@ -30,7 +30,7 @@ if (mysqli_connect_errno()) {
         }
         ?>
         <form action="" method="post" class="admin" enctype="multipart/form-data">
-            <input type="file" name="img"><?= $rows2['img']; ?><br>
+            <input type="file" name="img"><br>
             <?php echo $_FILES['img']['size']; ?>
             <input type="submit" value="Сохранить">
         </form>
@@ -44,16 +44,6 @@ if (mysqli_connect_errno()) {
 
         if (!move_uploaded_file($file['tmp_name'], $pathFile)); {
             echo "Файл не смог загрузиться";
-        }
-
-        if ($_POST['img'] != '') {
-            $img = $_POST['img'];
-        } else {
-            $img = $rows2['img'];
-        }
-        if (isset($img)) {
-            $row2 = "UPDATE i SET img='$img' WHERE id=1";
-            $mysqli->query($row2);
         }
         ?>
 
