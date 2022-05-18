@@ -35,7 +35,7 @@ include __DIR__ . '/db.php';
                 echo "Файл не смог загрузиться";
             }
 
-            $data = $query->prepare("INSERT INTO `i` (`path`) VALUES (?)");
+            $data = $query->prepare("INSERT INTO `i` (`path`) VALUES ($name)");
             $data->execute([$name]);
         }
         ?>
