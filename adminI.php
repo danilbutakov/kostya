@@ -32,7 +32,12 @@ include __DIR__ . '/db.php';
             $connection->query("INSERT INTO i (image) VALUES ('$img')");
         }
         ?>
-
+        <?php
+        $query = $connection->query("SELECT * FROM i ORDER BY id DESC");
+        while ($row3 = $query->fetch_assoc()) {
+            $showImg = base64_encode($row3['image']); ?>
+            <img src="data:image/jpeg;base64, <?php echo $showImg ?>" alt="">
+        <?php } ?>
     </div>
 </body>
 
