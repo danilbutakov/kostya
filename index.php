@@ -8,7 +8,7 @@ if (mysqli_connect_errno()) {
     exit();
 }
 
-$result = $conn->query("SELECT * FROM h");
+$result = $query->query("SELECT * FROM h");
 $res = mysqli_fetch_assoc($row);
 foreach ($result as $rows) {
 }
