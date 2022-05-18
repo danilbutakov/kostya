@@ -31,7 +31,6 @@ if (mysqli_connect_errno()) {
         ?>
         <form action="" method="post" class="admin" enctype="multipart/form-data">
             <input type="file" name="img"><br>
-            <?php echo $_FILES['img']['size']; ?>
             <input type="submit" value="Сохранить">
         </form>
         <?php
@@ -39,7 +38,7 @@ if (mysqli_connect_errno()) {
         if (!empty($_FILES['img'])) {
             $file = $_FILES['img'];
             $name = $file['name'];
-            $pathFile = __DIR__ . 'img/' . $name;
+            $pathFile = __DIR__ . '/img/' . $name;
         }
 
         if (!move_uploaded_file($file['tmp_name'], $pathFile)); {
