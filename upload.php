@@ -14,7 +14,8 @@ if (isset($_POST['submit']) && isset($_POST['my_image'])) {
             $em = "Файл слишком велик!";
             header("Loaction: adminI.php?error=$em");
         } else {
-            echo "Не больше 1Мб";
+            $img_ex = pathinfo($img_name, PATHINFO_EXTENSION);
+            echo ($img_ex);
         }
     } else {
         $em = "неизвестная ошибка!";
