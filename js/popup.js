@@ -14,8 +14,9 @@ closePopUp.addEventListener('click', () => {
     popUp.classList.remove('_active');
 });
 
-document.addEventListener('click', function(e) {
-    if (e.target.id != 'open__pop_up') {
-        open__pop_up.classList.add('_active');
+document.addEventListener('click', (e) => {
+    const click = e.composedPath().includes(popup);
+    if(!click) {
+        popup.style.display = 'none';
     }
 });
