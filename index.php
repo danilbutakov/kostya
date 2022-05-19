@@ -51,9 +51,9 @@ include "db.php";
             <button class="yandeks"><a href="https://yandex.ru/">Yandex</a></button>
         </div>
         <div class="img">
-            <img class="img1" src="img/Google-Logo-PNG-Photo-Image.png" alt="">
+            <img class="img1" src="images/Google-Logo-PNG-Photo-Image.png" alt="">
             <div class="img2"></div>
-            <img class="img3" src="img/vk.png" alt="">
+            <img class="img3" src="images/vk.png" alt="">
             <?php
             $sql = "SELECT * FROM images ORDER BY id DESC";
             $res = mysqli_query($mysqli, $sql);
