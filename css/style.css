@@ -285,6 +285,13 @@ th, td {
     transform: translateY(0%) scale(100%);
         background-color: rgba(0, 0, 0, .8);
 }
+.popup__container {
+    max-width: 700px;
+    margin: 50px auto;
+}
+.popup__body {
+    position: relative;
+}
 .close__popup {
     color: #FAFAFA;
     position: absolute;
