@@ -15,8 +15,8 @@ closePopUp.addEventListener('click', () => {
 });
 
 document.addEventListener('click', (e) => {
-    const click = e.composedPath().includes(popup);
+    const click = e.composedPath().includes(popUp);
     if(!click) {
-        popup.style.display = 'none';
+        popUp.classList.remove('_active');
     }
 });
