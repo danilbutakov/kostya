@@ -18,5 +18,7 @@ document.addEventListener('click', (e) => {
     const click = e.composedPath().includes(popUp);
     if(!click) {
         popUp.classList.remove('_active');
+    } else {
+        popUp.classList.add('_active');
     }
 });
