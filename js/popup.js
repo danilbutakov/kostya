@@ -17,3 +17,9 @@ closePopUp.addEventListener('click', () => {
 closePopUp1.addEventListener('click', () => {
     popUp.classList.remove('_active');
 });
+
+window.onclick = function(event) {
+    if (event.target == popUp) {
+        popUp.style.display = "none";
+    }
+};
