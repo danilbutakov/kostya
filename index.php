@@ -1,20 +1,7 @@
 <?php
 
-$mysqli = new mysqli('localhost', 'root', 'password', 'site');
+include "db.php";
 
-if (mysqli_connect_errno()) {
-    printf('Соединение не установлено');
-    exit();
-}
-
-$query = "SELECT * FROM h";
-$row = mysqli_query($mysqli, $query);
-foreach ($row as $rows) {
-}
-$query1 = "SELECT * FROM p";
-$row1 = mysqli_query($mysqli, $query1);
-foreach ($row1 as $rows1) {
-}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -67,6 +54,19 @@ foreach ($row1 as $rows1) {
             <img class="img1" src="img/Google-Logo-PNG-Photo-Image.png" alt="">
             <div class="img2"></div>
             <img class="img3" src="img/vk.png" alt="">
+            <?php
+            $sql = "SELECT * FROM images ORDER BY id DESC";
+            $res = mysqli_query($mysqli, $sql);
+
+            if (mysqli_num_rows($res) > 0) {
+                while ($images = mysqli_fetch_assoc($res)) { ?>
+
+                    <div class="alb">
+                        <img src="uploads/<?= $images['image_url'] ?>" alt="">
+                    </div>
+
+            <?php }
+            } ?>
         </div>
         <form action="" class="form">
             <input type="text" placeholder="Имя">

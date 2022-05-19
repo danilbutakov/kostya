@@ -1,4 +1,5 @@
 <?php
+
 include "db.php";
 
 if (isset($_POST['submit']) && isset($_POST['my_image'])) {
@@ -25,6 +26,9 @@ if (isset($_POST['submit']) && isset($_POST['my_image'])) {
                 $new_img_name = uniqid("IMG-", true) . '.' . $img_ex_lc;
                 $img_upload_path = 'uploads/' . $new_img_name;
                 move_uploaded_file($tmp_name, $img_upload_path);
+
+                $sql = "INSERT INTO images(image_url) VALUES ('$new_img_name')";
+                mysqli_query($conn, $sql);
             } else {
                 $em = "Вы не можете загрузить файл этого типа!";
                 header("Loaction: adminI.php?error=$em");
@@ -47,7 +51,6 @@ if (isset($_POST['submit']) && isset($_POST['my_image'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adminka</title>
     <link rel="stylesheet" href="css/admin.css">
-
 </head>
 
 <body>
