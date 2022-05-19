@@ -266,3 +266,55 @@ th, td {
     width: 100px;
     background-color: black;
 }
+._active {
+    border-bottom: solid #313131 2px;
+    border-radius: 1px;
+}
+.popup {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: transparent;
+    z-index: 5;
+    transform: translateY(-44.5%) scale(0);
+    transition: all 0.5s ease 0s;
+}
+.popup._active {
+    transform: translateY(0%) scale(100%);
+        background-color: rgba(0, 0, 0, .8);
+}
+.close__popup {
+    color: #FAFAFA;
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    font-size: 21px;
+    cursor: pointer;
+}
+@media(max-width: 768px) {
+    .close__popup {
+        display: none;
+    }
+}
+@media(min-width: 768px) {
+    .close__popup {
+        display: block;
+    }
+}
+button#close__pop_up_1.close__pop_up {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 28 / 16 * 100%;
+    text-align: center;
+    letter-spacing: 0.5px;
+    color: #000000;
+    background-color: #FFFFFF;
+    border: 3.5px solid #000000;
+    border-radius: 3px;
+    padding: 5px 15px;
+    margin: 30px 0 0 0;
+}
