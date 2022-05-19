@@ -8,11 +8,6 @@ const popUp = document.getElementById('pop_up');
 openPopUp.addEventListener('click', function(e) {
     e.preventDefault();
     popUp.classList.add('_active');
-
-    const click1 = e.composedPath().includes(popUp);
-    if(click1) {
-        popUp.classList.remove('_active');
-    }
 });
 
 closePopUp.addEventListener('click', () => {
