@@ -261,7 +261,11 @@ th, td {
     display: flex;
     justify-content: center;
 }
-
+.btnvid {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
 .btnvideo {
     color: white;
     border: 1px solid #ff6464;
