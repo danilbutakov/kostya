@@ -42,20 +42,6 @@ if (move_uploaded_file($_FILES['image']['tmp_name'], $target)) {
             <input type="submit" value="Сохранить" name="upload">
         </form>
         <h2><a href="index.php">Выход</a></h2>
-        <?php
-        if (isset($_POST['upload'])) {
-            if (!empty($_FILES['img_upload']['tmp_name'])) {
-                $img = addslashes(file_get_contents($_FILES['img_upload']['tmp_name']));
-            }
-            $connection->query("INSERT INTO images (img) VALUES ('$img')");
-        }
-        ?>
-        <?php
-        $query = $connection->query("SELECT * FROM images ORDER BY id DESC");
-        while ($row3 = $query->fetch_assoc()) {
-            $showImg = base64_encode($row3['img']); ?>
-            <img src="data:image/jpeg;base64, <?php echo $showImg ?>" alt="">
-        <?php } ?>
     </div>
 </body>
 
