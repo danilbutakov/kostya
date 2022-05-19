@@ -3,7 +3,7 @@
 $msg = "";
 
 if (isset($_POST['upload'])) {
-    $target = "images/" . basename($_FILES['image']['name']);
+    $target = "/images/" . basename($_FILES['image']['name']);
 }
 
 $db = mysqli_connect("localhost", "root", "password", "site");
