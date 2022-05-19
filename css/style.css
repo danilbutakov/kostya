@@ -246,7 +246,6 @@ th, td {
     animation: 5s show ease;
     display: flex;
     flex-direction: column;
-    justify-content: center;
 }
 @keyframes show {
     from { opacity: 0; }
