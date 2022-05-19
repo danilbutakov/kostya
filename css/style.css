@@ -310,14 +310,7 @@ th, td {
         display: block;
     }
 }
-button#close__pop_up_1.close__pop_up {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 28 / 16 * 100%;
-    text-align: center;
-    letter-spacing: 0.5px;
+button#close__pop_up.close__popup.btnvideo {
     color: #000000;
     background-color: #FFFFFF;
     border: 3.5px solid #000000;
