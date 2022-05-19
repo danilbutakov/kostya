@@ -1,5 +1,22 @@
 <?php
-include __DIR__ . '/db.php';
+
+$msg = "";
+
+if (isset($_POST['upload'])) {
+    $target = "img/" . basename($_FILES['image']['name']);
+}
+
+$db = mysqli_connect("localhost", "root", "password", "site");
+
+$image = $_FILES['image']['name'];
+$sql = "INSERT INTO images (image) VALUES ('$image')";
+mysqli_query($db, $sql);
+
+if (move_uploaded_file($_FILES['image']['tmp_name'], $target)) {
+    $msg = "Картинка загрузилась успешно!";
+} else {
+    $msg = "Проблемы с загрузкой файла!";
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,7 +37,8 @@ include __DIR__ . '/db.php';
         <h3><a href="admin.php">Редактирование h1</a></h3>
 
         <form action="" method="post" class="admin" enctype="multipart/form-data">
-            <input type="file" name="img_upload"><br>
+            <input type="hidden" name="size" value="1000000">
+            <input type="file" name="imgage"><br>
             <input type="submit" value="Сохранить" name="upload">
         </form>
         <h2><a href="index.php">Выход</a></h2>
