@@ -14,12 +14,6 @@ closePopUp.addEventListener('click', () => {
     popUp.classList.remove('_active');
 });
 
-closePopUp1.addEventListener('click', () => {
+if(popUp !== ('_active')){
     popUp.classList.remove('_active');
-});
-
-window.onclick = function(e) {
-    if (e.target == popUp) {
-        popUp.classList.remove('_active');
-    }
 };
