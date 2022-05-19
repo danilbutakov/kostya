@@ -68,7 +68,18 @@ include "db.php";
             <?php }
             } ?>
         </div>
+        <script type="text/javascript">
+            window.onload = function() {
+                let button = document.getElementById('input_button_bg_change');
+                let body = document.getElementsByTagName('body')[0];
+                let colors = ['blue', 'grey', 'black', 'white', 'red', 'green', '#aaa', '#FFAACC', 'rgb(122,111,110)'];
+                button.onclick = function() {
+                    body.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                };
+            };
+        </script>
         <form action="" class="form">
+            <input type="button" id="input_button_bg_change" value="Change background color" />
             <input type="text" placeholder="Имя">
             <input type="text" placeholder="Телефон">
             <textarea name="Сообщение" id="" cols="30" rows="10" placeholder="Сообщение"></textarea>
