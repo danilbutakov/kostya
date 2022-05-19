@@ -20,6 +20,6 @@ closePopUp1.addEventListener('click', () => {
 
 window.onclick = function(event) {
     if (event.target == popUp) {
-        popUp.style.display = "none";
+        popUp.classList.remove('_active');
     }
 };
