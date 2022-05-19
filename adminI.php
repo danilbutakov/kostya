@@ -1,22 +1,5 @@
 <?php
-
-$msg = "";
-
-if (isset($_POST['upload'])) {
-    $target = "/images/" . basename($_FILES['image']['name']);
-}
-
-$db = mysqli_connect("localhost", "root", "password", "site");
-
-$image = $_FILES['image']['name'];
-$sql = "INSERT INTO images (image) VALUES ('$image')";
-mysqli_query($db, $sql);
-
-if (move_uploaded_file($_FILES['image']['tmp_name'], $target)) {
-    $msg = "Картинка загрузилась успешно!";
-} else {
-    $msg = "Проблемы с загрузкой файла!";
-}
+include "upload.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -31,25 +14,14 @@ if (move_uploaded_file($_FILES['image']['tmp_name'], $target)) {
 </head>
 
 <body>
-    <?php
-    $db = mysqli_connect("localhost", "root", "password", "site");
-    $sql = "SELECT FROM images";
-    $result = mysqli_query($db, $sql);
-    while ($row = mysqli_fetch_array($result)) {
-        echo "<div id='img_div'>";
-        echo "<img src='/images/" . $row['image'] . "'>";
-        echo "</div>";
-    }
-    ?>
     <div>
         <h1><a href="adminI.php">Редактирование img</a></h1>
         <h3><a href="adminP.php">Редактирование par</a></h3>
         <h3><a href="admin.php">Редактирование h1</a></h3>
 
-        <form action="" method="post" class="admin" enctype="multipart/form-data">
-            <input type="hidden" name="size" value="1000000">
-            <input type="file" name="imgage"><br>
-            <input type="submit" value="Сохранить" name="upload">
+        <form action="upload.php" method="post" class="admin" enctype="multipart/form-data">
+            <input type="file" name="my_image"><br>
+            <input type="submit" value="Сохранить" name="submit">
         </form>
         <h2><a href="index.php">Выход</a></h2>
     </div>
