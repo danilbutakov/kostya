@@ -9,9 +9,9 @@ openPopUp.addEventListener('click', function(e) {
     e.preventDefault();
     popUp.classList.add('_active');
 
-    const click1 = e.composedPath().includes(popUp);
+    const click1 = e.composedPath().includes(popup);
     if(!click1) {
-        popUp.classList.remove('_active');
+        popup.classList.remove('_active');
     }
 });
 
