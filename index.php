@@ -68,17 +68,17 @@ include "db.php";
             <?php }
             } ?>
         </div>
-        <script type="text/javascript">
-            window.onload = function() {
-                let button = document.getElementById('input_button_bg_change');
-                let body = document.getElementsByTagName('body')[0];
-                let colors = ['blue', 'grey', 'black', 'white', 'red', 'green', '#aaa', '#FFAACC', 'rgb(122,111,110)'];
-                button.onclick = function() {
-                    form.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-                };
-            };
-        </script>
         <form action="" class="form">
+            <script type="text/javascript">
+                window.onload = function() {
+                    let button = document.getElementById('input_button_bg_change');
+                    let body = document.getElementsByTagName('body')[0];
+                    let colors = ['blue', 'grey', 'black', 'white', 'red', 'green', '#aaa', '#FFAACC', 'rgb(122,111,110)'];
+                    button.onclick = function() {
+                        form.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                    };
+                };
+            </script>
             <input type="button" id="input_button_bg_change" value="Change background color" />
             <input type="text" placeholder="Имя">
             <input type="text" placeholder="Телефон">
