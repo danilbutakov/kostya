@@ -247,6 +247,7 @@ th, td {
     display: flex;
     flex-direction: column;
     text-align: center;
+    margin: auto auto;
 }
 @keyframes show {
     from { opacity: 0; }
