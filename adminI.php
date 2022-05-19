@@ -31,6 +31,16 @@ if (move_uploaded_file($_FILES['image']['tmp_name'], $target)) {
 </head>
 
 <body>
+    <?php
+    $db = mysqli_connect("localhost", "root", "password", "site");
+    $sql = "SELECT FROM images";
+    $result = mysqli_query($db, $sql);
+    while ($row = mysqli_fetch_array($result)) {
+        echo "<div id='img_div'>";
+        echo "<img src='/images/" . $row['image'] . "'>";
+        echo "</div>";
+    }
+    ?>
     <div>
         <h1><a href="adminI.php">Редактирование img</a></h1>
         <h3><a href="adminP.php">Редактирование par</a></h3>
