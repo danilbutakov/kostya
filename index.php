@@ -233,9 +233,8 @@ include "db.php";
                 <div class="popup__body">
                     <div class="video">
                         <iframe width="560" height="315" src="https://www.youtube.com/embed/YPRaA6KhyXc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        <button class="btnvideo">Кнопка</button>
+                        <button class="close__popup" id="close__pop_up btnvideo">Кнопка</button>
                     </div>
-                    <div class="close__popup" id="close__pop_up">&#10006</div>
                 </div>
             </div>
         </section>
