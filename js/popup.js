@@ -14,6 +14,8 @@ closePopUp.addEventListener('click', () => {
     popUp.classList.remove('_active');
 });
 
-if(popUp !== ('_active')){
-    popUp.classList.remove('_active');
-};
+document.addEventListener('click', function(e) {
+    if (e.target.id != 'open__pop_up') {
+        open__pop_up.classList.add('_active');
+    }
+});
