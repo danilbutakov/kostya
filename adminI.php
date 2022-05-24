@@ -58,6 +58,7 @@ if (isset($_POST['submit']) && isset($_POST['my_image'])) {
         <h1><a href="adminI.php">Редактирование img</a></h1>
         <h3><a href="adminP.php">Редактирование par</a></h3>
         <h3><a href="admin.php">Редактирование h1</a></h3>
+        <h3><a href="users.php">Просмотр users</a></h3>
 
         <form action="" method="post" class="admin" enctype="multipart/form-data">
             <input type="file" name="my_image"><br>

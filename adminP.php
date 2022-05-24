@@ -23,6 +23,7 @@ if (mysqli_connect_errno()) {
         <h1><a href="">Редактирование par</a></h1>
         <h3><a href="admin.php">Редактирование h1</a></h3>
         <h3><a href="adminI.php">Редактирование img</a></h3>
+        <h3><a href="users.php">Просмотр users</a></h3>
         <?php
         $query = "SELECT * FROM p";
         $row1 = mysqli_query($mysqli, $query);
