@@ -50,20 +50,20 @@ include "db.php";
         <div class="yanbtn">
             <button class="yandeks"><a href="https://yandex.ru/">Yandex</a></button>
         </div>
-        <div id="close__pop_up_img" class="slider">
+        <div id="popUpImg" class="slider">
             <div class="item" id="pop_up_img1">
-                <img id="pop_up_img1" class="img1" src="images/Google-Logo-PNG-Photo-Image.png" alt="">
-                <div id="pop_up_img_1" class="slideText">Заголовок слайда 1</div>
+                <img id="openPopUpImg" class="img1" src="images/Google-Logo-PNG-Photo-Image.png" alt="">
+                <div id="openPopUpImg" class="slideText">Заголовок слайда 1</div>
             </div>
 
             <div class="item" id="pop_up_img1">
-                <img id="pop_up_img2" src="images/inst.png" class="img2"></img>
-                <div id="pop_up_img_2" class="slideText">Заголовок слайда 2</div>
+                <img id="openPopUpImg" src="images/inst.png" class="img2"></img>
+                <div id="openPopUpImg" class="slideText">Заголовок слайда 2</div>
             </div>
 
             <div class="item">
-                <img id="pop_up_img3" class="img3" src="images/vk.png" alt="">
-                <div id="pop_up_img_3" class="slideText">Заголовок слайда 3</div>
+                <img id="openPopUpImg" class="img3" src="images/vk.png" alt="">
+                <div id="openPopUpImg" class="slideText">Заголовок слайда 3</div>
             </div>
 
             <a class="prev" onclick="minusSlide()">&#10094;</a>

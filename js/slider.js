@@ -39,43 +39,18 @@ function showSlides(n) {
 }
 
 
-const open_pop_up_img1 = document.getElementById('pop_up_img1');
-const open_pop_up_img2 = document.getElementById('pop_up_img2');
-const open_pop_up_img3 = document.getElementById('pop_up_img3');
+const openPopUpImg = document.getElementById('openPopUpImg');
 
-const closePopUpImg1 = document.getElementById('close__pop_up_img');
-const closePopUpImg2 = document.getElementById('close__pop_up_img');
-const closePopUpImg3 = document.getElementById('close__pop_up_img');
-
-const imgUp1 = document.getElementById('pop_up_img1');
-const imgUp2 = document.getElementById('pop_up_img2');
-const imgUp3 = document.getElementById('pop_up_img3');
+const popUpImg = document.getElementById('popUpImg');
 
 
-open_pop_up_img1.addEventListener('click', function(e) {
+openPopUpImg.addEventListener('click', function(e) {
     e.preventDefault();
-    imgUp1.classList.add('_active');
+    popUpImg.classList.add('_active');
 });
 
-open_pop_up_img2.addEventListener('click', function(e) {
+
+popUpImg.addEventListener('click', function(e) {
     e.preventDefault();
-    imgUp2.classList.add('_active');
-});
-
-open_pop_up_img3.addEventListener('click', function(e) {
-    e.preventDefault();
-    imgUp3.classList.add('_active');
-});
-
-closePopUpImg1.addEventListener('click', function(e) {
-    e.preventDefault();
-    imgUp1.classList.remove('_active');
-});
-
-closePopUpImg2.addEventListener('click', () => {
-    imgUp2.classList.remove('_active');
-});
-
-closePopUpImg3.addEventListener('click', () => {
-    imgUp3.classList.remove('_active');
+    popUpImg.classList.remove('_active');
 });
