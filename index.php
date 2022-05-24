@@ -57,10 +57,9 @@ include "db.php";
                 <div class="img2"></div>
             </li>
             <li class="slide"><img class="img3" src="images/vk.png" alt=""></li>
-            <button class="controls" id="previous">Previous</button>
-            <button class="controls" id="next">Next</button>
         </ul>
-
+        <button class="controls" id="previous">Previous</button>
+        <button class="controls" id="next">Next</button>
         <?php
         $sql = "SELECT * FROM images ORDER BY id DESC";
         $res = mysqli_query($mysqli, $sql);
