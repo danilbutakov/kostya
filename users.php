@@ -54,7 +54,7 @@ if (mysqli_connect_errno()) {
             $message = $rows['message'];
         }
         if (isset($name, $phone, $message)) {
-            $row = "UPDATE users SET name = '$name', phone = '$phone', message = '$message' WHERE id =1 ";
+            $row = "UPDATE users SET (name = '$name', phone = '$phone', message = '$message') WHERE id =1 ";
             $mysqli->query($row);
         }
         ?>
