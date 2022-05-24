@@ -63,7 +63,7 @@ include "db.php";
 
             <div class="item">
                 <img id="openPopUpImg3" class="img3" src="images/vk.png" alt="">
-                <button id="closePopUpImg2" class="close_popUp_img">Close</button>
+                <button id="closePopUpImg3" class="close_popUp_img">Close</button>
             </div>
 
             <a class="prev" onclick="minusSlide()">&#10094;</a>

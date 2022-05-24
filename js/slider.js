@@ -46,8 +46,8 @@ const openPopUpImg3 = document.getElementById('openPopUpImg3');
 const popUpImg = document.getElementById('popUpImg');
 
 const closePopUpImg1 = document.getElementById('closePopUpImg1');
-const closePopUpImg2 = document.getElementById('closePopUpImg1');
-const closePopUpImg3 = document.getElementById('closePopUpImg1');
+const closePopUpImg2 = document.getElementById('closePopUpImg2');
+const closePopUpImg3 = document.getElementById('closePopUpImg3');
 
 
 openPopUpImg1.addEventListener('click', function(e) {
