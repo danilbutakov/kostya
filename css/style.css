@@ -299,7 +299,7 @@ th, td {
 }
 .popup._active {
     transform: translateY(0%) scale(100%);
-        background-color: rgba(0, 0, 0, .8);
+    background-color: rgba(0, 0, 0, .8);
 }
 .popup__container {
     max-width: 700px;
@@ -422,3 +422,12 @@ th, td {
     }
 }
 
+.__act {
+    border-bottom: solid #313131 2px;
+    border-radius: 1px;
+}
+
+.slider.__act {
+    transform: translateY(0%) scale(100%);
+    background-color: rgba(0, 0, 0, .8);
+}
