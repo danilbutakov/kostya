@@ -51,11 +51,8 @@ include "db.php";
             <button class="yandeks"><a href="https://yandex.ru/">Yandex</a></button>
         </div>
         <div class="img">
-
-
-
             <ul class="sim-slider-list">
-                <li><img src="screen.gif" alt="screen"></li> <!-- это экран -->
+                <li class="sim-slider-element"><img class="img1" src="images/Google-Logo-PNG-Photo-Image.png" alt=""></li>
                 <li class="sim-slider-element">
                     <div class="img2"></div>
                 </li>
