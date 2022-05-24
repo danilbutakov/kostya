@@ -46,11 +46,8 @@ const popUpImg = document.getElementById('popUpImg');
 
 openPopUpImg.addEventListener('click', function(e) {
     e.preventDefault();
-    popUpImg.classList.add('.act');
+    popUpImg.classList.add('act');
 });
 
 
-popUpImg.addEventListener('click', function(e) {
-    e.preventDefault();
-    popUpImg.classList.remove('.act');
-});
+
