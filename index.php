@@ -240,8 +240,8 @@ include "db.php";
         </div>
         <a href="#" class="header__link sign-up" id="open__pop_up">Video</a>
         <section class="popup" id="pop_up">
-            <div class="popup__container" id="popup__container">
-                <div class="popup__body">
+            <div class="popup__container">
+                <div class="popup__body" id="popup__body">
                     <div class="video">
                         <iframe width="560" height="315" src="https://www.youtube.com/embed/YPRaA6KhyXc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         <div class="btnvid">

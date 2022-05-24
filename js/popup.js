@@ -3,7 +3,7 @@
 const openPopUp = document.getElementById('open__pop_up');
 const closePopUp = document.getElementById('close__pop_up');
 const popUp = document.getElementById('pop_up');
-const popUpBody = document.getElementById('popup__container');
+const popUpBody = document.getElementById('popup__body');
 
 openPopUp.addEventListener('click', function(e) {
     e.preventDefault();
