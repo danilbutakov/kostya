@@ -334,7 +334,7 @@ th, td {
     position: relative;
     margin: auto;
     height: 300px;
-    margin-bottom: 15px;
+    margin-bottom: 100px;
 }
 /* Картинка мастабируется по отношению к родительскому элементу */
 .slider .item img {
