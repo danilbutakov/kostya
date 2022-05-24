@@ -50,7 +50,7 @@ include "db.php";
         <div class="yanbtn">
             <button class="yandeks"><a href="https://yandex.ru/">Yandex</a></button>
         </div>
-        <div class="img">
+        <div class="sim-slider">
             <ul class="sim-slider-list">
                 <li class="sim-slider-element"><img class="img1" src="images/Google-Logo-PNG-Photo-Image.png" alt=""></li>
                 <li class="sim-slider-element">

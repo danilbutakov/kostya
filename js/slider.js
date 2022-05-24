@@ -5,7 +5,7 @@ function Sim(sldrId) {
 		this.sldrRoot = id
 	}
 	else {
-		this.sldrRoot = document.querySelector('.img')
+		this.sldrRoot = document.querySelector('.sim-slider')
 	};
 
 	// Slider objects
