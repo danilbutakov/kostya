@@ -50,14 +50,32 @@ include "db.php";
         <div class="yanbtn">
             <button class="yandeks"><a href="https://yandex.ru/">Yandex</a></button>
         </div>
+        <div class="slider">
+            <div class="item">
+                <img class="img1" src="images/Google-Logo-PNG-Photo-Image.png" alt="">
+                <div class="slideText">Заголовок слайда 1</div>
+            </div>
 
-        <ul id="slides">
-            <li class="slide showing"><img class="img1" src="images/Google-Logo-PNG-Photo-Image.png" alt=""></li>
-            <li class="slide">
+            <div class="item">
                 <div class="img2"></div>
-            </li>
-            <li class="slide"><img class="img3" src="images/vk.png" alt=""></li>
-        </ul>
+                <div class="slideText">Заголовок слайда 2</div>
+            </div>
+
+            <div class="item">
+                <img class="img3" src="images/vk.png" alt="">
+                <div class="slideText">Заголовок слайда 3</div>
+            </div>
+
+            <a class="prev" onclick="minusSlide()">&#10094;</a>
+            <a class="next" onclick="plusSlide()">&#10095;</a>
+        </div>
+
+        <div class="slider-dots">
+            <span class="slider-dots_item" onclick="currentSlide(1)"></span>
+            <span class="slider-dots_item" onclick="currentSlide(2)"></span>
+            <span class="slider-dots_item" onclick="currentSlide(3)"></span>
+        </div>
+
 
         <?php
         $sql = "SELECT * FROM images ORDER BY id DESC";
