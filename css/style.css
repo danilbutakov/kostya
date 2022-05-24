@@ -246,6 +246,8 @@ th, td {
     animation: 5s show ease;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    width: 50%;
     text-align: center;
     margin: auto auto;
 }
