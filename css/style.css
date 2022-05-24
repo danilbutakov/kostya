@@ -244,6 +244,8 @@ th, td {
 
 .header__link {
     width: 50%;
+    display: flex;
+    justify-content: center;
 }
 
 .video {
