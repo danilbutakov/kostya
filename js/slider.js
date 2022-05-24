@@ -37,3 +37,37 @@ function showSlides(n) {
     slides[slideIndex - 1].style.display = "block";
     dots[slideIndex - 1].className += " active";
 }
+
+
+const openPopUpImg1 = document.getElementById('open__pop_up_img1');
+const openPopUpImg2 = document.getElementById('open__pop_up_img2');
+const openPopUpImg3 = document.getElementById('open__pop_up_img3');
+
+const closePopUpImg = document.getElementById('close__pop_up_img');
+
+const imgUp = document.getElementById('pop_up_img');
+
+
+openPopUpImg1.addEventListener('click', function(e) {
+    e.preventDefault();
+    imgUp.classList.add('_active');
+});
+
+openPopUpImg2.addEventListener('click', function(e) {
+    e.preventDefault();
+    imgUp.classList.add('_active');
+});
+
+openPopUpImg3.addEventListener('click', function(e) {
+    e.preventDefault();
+    imgUp.classList.add('_active');
+});
+
+imgUp.addEventListener('click', function(e) {
+    e.preventDefault();
+    popUp.classList.remove('_active');
+});
+
+closePopUpImg.addEventListener('click', () => {
+    imgUp.classList.remove('_active');
+});

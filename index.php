@@ -50,24 +50,24 @@ include "db.php";
         <div class="yanbtn">
             <button class="yandeks"><a href="https://yandex.ru/">Yandex</a></button>
         </div>
-        <div class="slider">
-            <div class="item">
+        <div class="slider" id="pop_up_img">
+            <div class="item" id="open__pop_up_img1">
                 <img class="img1" src="images/Google-Logo-PNG-Photo-Image.png" alt="">
                 <div class="slideText">Заголовок слайда 1</div>
             </div>
 
-            <div class="item">
+            <div class="item" id="open__pop_up_img2">
                 <img src="images/inst.png" class="img2"></img>
                 <div class="slideText">Заголовок слайда 2</div>
             </div>
 
-            <div class="item">
+            <div class="item" id="open__pop_up_img3">
                 <img class="img3" src="images/vk.png" alt="">
                 <div class="slideText">Заголовок слайда 3</div>
             </div>
 
-            <a class="prev" onclick="minusSlide()">&#10094;</a>
-            <a class="next" onclick="plusSlide()">&#10095;</a>
+            <a id="close__pop_up_img" class="prev" onclick="minusSlide()">&#10094;</a>
+            <a id="close__pop_up_img" class="next" onclick="plusSlide()">&#10095;</a>
         </div>
 
         <div class="slider-dots">
