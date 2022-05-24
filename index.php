@@ -52,18 +52,15 @@ include "db.php";
         </div>
         <div id="popUpImg" class="slider">
             <div class="item" id="pop_up_img1">
-                <img class="img1" src="images/Google-Logo-PNG-Photo-Image.png" alt="">
-                <div id="openPopUpImg" class="slideText">Заголовок слайда 1</div>
+                <img id="openPopUpImg" class="img1" src="images/Google-Logo-PNG-Photo-Image.png" alt="">
             </div>
 
             <div class="item" id="pop_up_img1">
-                <img src="images/inst.png" class="img2"></img>
-                <div id="openPopUpImg" class="slideText">Заголовок слайда 2</div>
+                <img id="openPopUpImg" src="images/inst.png" class="img2"></img>
             </div>
 
             <div class="item">
-                <img class="img3" src="images/vk.png" alt="">
-                <div id="openPopUpImg" class="slideText">Заголовок слайда 3</div>
+                <img id="openPopUpImg" class="img3" src="images/vk.png" alt="">
             </div>
 
             <a class="prev" onclick="minusSlide()">&#10094;</a>
