@@ -241,13 +241,17 @@ th, td {
         float: left;
     }
 }
+
+.header__link {
+    width: 50%;
+}
+
 .video {
     margin-bottom: 30px;
     animation: 5s show ease;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 50%;
     text-align: center;
     margin: auto auto;
 }
