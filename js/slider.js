@@ -43,7 +43,7 @@ const openPopUpImg = document.getElementById('openPopUpImg');
 
 const popUpImg = document.getElementById('popUpImg');
 
-const closePopUpImg = document.getElementById('openpopUpImg');
+const closePopUpImg = document.getElementById('pop_up_img1');
 
 
 openPopUpImg.addEventListener('click', function(e) {
@@ -52,7 +52,7 @@ openPopUpImg.addEventListener('click', function(e) {
 });
 
 
-popUpImg.addEventListener('click', function(e) {
+closePopUpImg.addEventListener('click', function(e) {
     e.preventDefault();
     popUpImg.classList.remove('act');
 });
