@@ -39,19 +39,43 @@ function showSlides(n) {
 }
 
 
-const openPopUpImg = document.getElementById('openPopUpImg');
+const openPopUpImg1 = document.getElementById('openPopUpImg');
+const openPopUpImg2 = document.getElementById('openPopUpImg2');
+const openPopUpImg3 = document.getElementById('openPopUpImg3');
 
 const popUpImg = document.getElementById('popUpImg');
 
-const closePopUpImg = document.getElementById('closePopUpImg');
+const closePopUpImg1 = document.getElementById('closePopUpImg1');
+const closePopUpImg2 = document.getElementById('closePopUpImg1');
+const closePopUpImg3 = document.getElementById('closePopUpImg1');
 
 
-openPopUpImg.addEventListener('click', function(e) {
+openPopUpImg1.addEventListener('click', function(e) {
     e.preventDefault();
     popUpImg.classList.add('act');
 });
 
-closePopUpImg.addEventListener('click', function(e) {
+openPopUpImg2.addEventListener('click', function(e) {
+    e.preventDefault();
+    popUpImg.classList.add('act');
+});
+
+openPopUpImg3.addEventListener('click', function(e) {
+    e.preventDefault();
+    popUpImg.classList.add('act');
+});
+
+closePopUpImg1.addEventListener('click', function(e) {
+    e.preventDefault();
+    popUpImg.classList.remove('act');
+});
+
+closePopUpImg2.addEventListener('click', function(e) {
+    e.preventDefault();
+    popUpImg.classList.remove('act');
+});
+
+closePopUpImg3.addEventListener('click', function(e) {
     e.preventDefault();
     popUpImg.classList.remove('act');
 });
