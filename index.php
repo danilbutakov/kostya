@@ -53,14 +53,17 @@ include "db.php";
         <div id="popUpImg" class="slider">
             <div class="item" id="pop_up_img1">
                 <img id="openPopUpImg" class="img1" src="images/Google-Logo-PNG-Photo-Image.png" alt="">
+                <button id="closePopUpImg" class="close_popUp_img">Close</button>
             </div>
 
             <div class="item" id="pop_up_img1">
                 <img id="openPopUpImg" src="images/inst.png" class="img2"></img>
+                <button id="closePopUpImg" class="close_popUp_img">Close</button>
             </div>
 
             <div class="item">
                 <img id="openPopUpImg" class="img3" src="images/vk.png" alt="">
+                <button id="closePopUpImg" class="close_popUp_img">Close</button>
             </div>
 
             <a class="prev" onclick="minusSlide()">&#10094;</a>

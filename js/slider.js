@@ -43,9 +43,7 @@ const openPopUpImg = document.getElementById('openPopUpImg');
 
 const popUpImg = document.getElementById('popUpImg');
 
-const closePopUpImg1 = document.getElementById('pop_up_img1');
-const closePopUpImg2 = document.getElementById('pop_up_img2');
-const closePopUpImg3 = document.getElementById('pop_up_img3');
+const closePopUpImg = document.getElementById('closePopUpImg');
 
 
 openPopUpImg.addEventListener('click', function(e) {
@@ -53,17 +51,7 @@ openPopUpImg.addEventListener('click', function(e) {
     popUpImg.classList.add('act');
 });
 
-closePopUpImg1.addEventListener('click', function(e) {
-    e.preventDefault();
-    popUpImg.classList.remove('act');
-});
-
-closePopUpImg2.addEventListener('click', function(e) {
-    e.preventDefault();
-    popUpImg.classList.remove('act');
-});
-
-closePopUpImg3.addEventListener('click', function(e) {
+closePopUpImg.addEventListener('click', function(e) {
     e.preventDefault();
     popUpImg.classList.remove('act');
 });
