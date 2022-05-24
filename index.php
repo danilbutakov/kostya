@@ -51,9 +51,19 @@ include "db.php";
             <button class="yandeks"><a href="https://yandex.ru/">Yandex</a></button>
         </div>
         <div class="img">
-            <img class="img1" src="images/Google-Logo-PNG-Photo-Image.png" alt="">
-            <div class="img2"></div>
-            <img class="img3" src="images/vk.png" alt="">
+
+
+
+            <ul class="sim-slider-list">
+                <li><img src="screen.gif" alt="screen"></li> <!-- это экран -->
+                <li class="sim-slider-element">
+                    <div class="img2"></div>
+                </li>
+                <li class="sim-slider-element"><img class="img3" src="images/vk.png" alt=""></li>
+            </ul>
+            <div class="sim-slider-arrow-left"></div>
+            <div class="sim-slider-arrow-right"></div>
+            <div class="sim-slider-dots"></div>
             <?php
             $sql = "SELECT * FROM images ORDER BY id DESC";
             $res = mysqli_query($mysqli, $sql);
@@ -241,7 +251,7 @@ include "db.php";
         <a href="#" class="header__link sign-up" id="open__pop_up">Video</a>
         <section class="popup" id="pop_up">
             <div class="popup__container">
-                <div class="popup__body" id="popup__body">
+                <div class="popup__body">
                     <div class="video">
                         <iframe width="560" height="315" src="https://www.youtube.com/embed/YPRaA6KhyXc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         <div class="btnvid">
@@ -256,6 +266,7 @@ include "db.php";
         </div>
     </div>
     <script src="js/popup.js"></script>
+    <script src="js/slider.js"></script>
 </body>
 
 </html>
