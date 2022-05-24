@@ -50,4 +50,7 @@ openPopUpImg.addEventListener('click', function(e) {
 });
 
 
-
+popUpImg.addEventListener('click', function(e) {
+    e.preventDefault();
+    popUpImg.classList.remove('act');
+});

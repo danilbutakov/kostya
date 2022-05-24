@@ -422,12 +422,14 @@ th, td {
     }
 }
 
-.__act {
+.act {
     border-bottom: solid #313131 2px;
     border-radius: 1px;
+    transition: all 0.3s ease 0s;
 }
 
 .slider.act {
-    transform: translateY(0%) scale(100%);
+    transform: translateY(0%) scale(500%);
     background-color: rgba(0, 0, 0, .8);
+    transition: all 0.3s ease 0s;
 }
