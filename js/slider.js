@@ -39,7 +39,7 @@ function showSlides(n) {
 }
 
 
-const openPopUpImg1 = document.getElementById('openPopUpImg');
+const openPopUpImg1 = document.getElementById('openPopUpImg1');
 const openPopUpImg2 = document.getElementById('openPopUpImg2');
 const openPopUpImg3 = document.getElementById('openPopUpImg3');
 
