@@ -12,13 +12,9 @@ openPopUp.addEventListener('click', function(e) {
 
 popUpBody.addEventListener('click', function(e) {
     e.preventDefault();
-    popUpBody.classList.add('._active');
+    popUp.classList.remove('_active');
 });
 
 closePopUp.addEventListener('click', () => {
     popUp.classList.remove('_active');
-});
-
-popUpBody.addEventListener('click', () => {
-    popUpBody.classList.remove('._active');
 });
