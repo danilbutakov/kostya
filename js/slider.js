@@ -52,7 +52,4 @@ openPopUpImg.addEventListener('click', function(e) {
 });
 
 
-closePopUpImg.addEventListener('click', function(e) {
-    e.preventDefault();
-    popUpImg.classList.remove('act');
-});
+
