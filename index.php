@@ -6,7 +6,7 @@ $query = $mysqli->query("SELECT * FROM users");
 
 $name = $_REQUEST['name'];
 $phone = $_REQUEST['phone'];
-$message = $_REQUEST['message '];
+$message = $_REQUEST['message'];
 
 if ($query != '') {
     $query = "INSERT INTO `users` VALUES (null, '$name', '$phone', '$message')";
