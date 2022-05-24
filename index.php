@@ -57,7 +57,7 @@ include "db.php";
             </div>
 
             <div class="item">
-                <div class="img2"></div>
+                <img src="images/inst.png" class="img2"></img>
                 <div class="slideText">Заголовок слайда 2</div>
             </div>
 
