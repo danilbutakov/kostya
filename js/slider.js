@@ -39,13 +39,15 @@ function showSlides(n) {
 }
 
 
-const openPopUpImg1 = document.getElementById('open__pop_up_img1');
-const openPopUpImg2 = document.getElementById('open__pop_up_img2');
-const openPopUpImg3 = document.getElementById('open__pop_up_img3');
+const open_pop_up_img1 = document.getElementById('pop_up_img1');
+const open_pop_up_img2 = document.getElementById('pop_up_img2');
+const open_pop_up_img3 = document.getElementById('pop_up_img3');
 
-const closePopUpImg = document.getElementById('close__pop_up_img');
+const closePopUpImg1 = document.getElementById('close__pop_up_img');
 
-const imgUp = document.getElementById('pop_up_img');
+const imgUp1 = document.getElementById('pop_up_img1');
+const imgUp2 = document.getElementById('pop_up_img2');
+const imgUp3 = document.getElementById('pop_up_img3');
 
 
 openPopUpImg1.addEventListener('click', function(e) {
