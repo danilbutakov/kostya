@@ -12,7 +12,7 @@ openPopUp.addEventListener('click', function(e) {
 
 popUpBody.addEventListener('click', function(e) {
     e.preventDefault();
-    popUpBody.classList.add('_active');
+    popUpBody.classList.add('._active');
 });
 
 closePopUp.addEventListener('click', () => {
@@ -20,5 +20,5 @@ closePopUp.addEventListener('click', () => {
 });
 
 popUpBody.addEventListener('click', () => {
-    popUpBody.classList.remove('_active');
+    popUpBody.classList.remove('._active');
 });
