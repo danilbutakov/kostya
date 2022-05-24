@@ -104,7 +104,15 @@ include "db.php";
         </script>
         <input type="button" id="input_button_bg_change" value="Change background color" />
         <input type="text" placeholder="Имя">
-        <input type="text" placeholder="Телефон">
+        <input id="phone" type="text">
+        <script>
+            //Код jQuery, установливающий маску для ввода телефона элементу input
+            //1. После загрузки страницы,  когда все элементы будут доступны выполнить...
+            $(function() {
+                //2. Получить элемент, к которому необходимо добавить маску
+                $("#phone").mask("8(999) 999-9999");
+            });
+        </script>
         <textarea name="Сообщение" id="" cols="30" rows="10" placeholder="Сообщение"></textarea>
         <button class="btn">Отправить</button>
     </form>
@@ -278,6 +286,8 @@ include "db.php";
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4882.981548093942!2d104.26211414792905!3d52.27079157812597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5da824a8ee4f155d%3A0x368423aaef9b2b13!2z0JjRgNC60YPRgtGB0LrQuNC5INCz0L7RgdGD0LTQsNGA0YHRgtCy0LXQvdC90YvQuSDRg9C90LjQstC10YDRgdC40YLQtdGCINC_0YPRgtC10Lkg0YHQvtC-0LHRidC10L3QuNGP!5e0!3m2!1sru!2sru!4v1652779756938!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
     </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="jquery.maskedinput.min.js"></script>
     <script src="js/popup.js"></script>
     <script src="js/slider.js"></script>
 </body>
