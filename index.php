@@ -2,6 +2,25 @@
 
 include "db.php";
 
+$query = $mysqli->query("SELECT * FROM users");
+
+$name = $_REQUEST['name'];
+$phone = $_REQUEST['phone'];
+$message = $_REQUEST['message '];
+
+if ($query != '') {
+    $query = "INSERT INTO `users` VALUES (null, '$name', '$phone', '$message')";
+}
+
+if (mysqli_query($mysqli, $query)) {
+    //header('Location: /login.php');
+} else {
+    //echo "ERROR: Не удалось выполнить $query. " . mysqli_error($mysqli);
+}
+
+
+$mysqli->close();
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -93,7 +112,7 @@ include "db.php";
         <?php }
         } ?>
     </div>
-    <form action="" class="form">
+    <form action="" method="post" class="form">
         <script type="text/javascript">
             window.onload = function() {
                 let button = document.getElementById('input_button_bg_change');
@@ -105,8 +124,8 @@ include "db.php";
             };
         </script>
         <input type="button" id="input_button_bg_change" value="Change background color" />
-        <input type="text" placeholder="Имя">
-        <input id="phone" type="text">
+        <input type="text" name="name" placeholder="Имя">
+        <input id="phone" name="phone" type="text">
         <script>
             //Код jQuery, установливающий маску для ввода телефона элементу input
             //1. После загрузки страницы,  когда все элементы будут доступны выполнить...
@@ -115,7 +134,7 @@ include "db.php";
                 $("#phone").mask("8(999) 999-9999");
             });
         </script>
-        <textarea name="Сообщение" id="" cols="30" rows="10" placeholder="Сообщение"></textarea>
+        <textarea name="message" id="" cols="30" rows="10" placeholder="Сообщение"></textarea>
         <button class="btn">Отправить</button>
     </form>
     <div class="tables">
