@@ -43,6 +43,8 @@ const openPopUpImg = document.getElementById('openPopUpImg');
 
 const popUpImg = document.getElementById('popUpImg');
 
+const closePopUpImg = document.getElementById('openpopUpImg');
+
 
 openPopUpImg.addEventListener('click', function(e) {
     e.preventDefault();
@@ -50,7 +52,7 @@ openPopUpImg.addEventListener('click', function(e) {
 });
 
 
-popUpImg.addEventListener('click', function(e) {
+closePopUpImg.addEventListener('click', function(e) {
     e.preventDefault();
     popUpImg.classList.remove('act');
 });
